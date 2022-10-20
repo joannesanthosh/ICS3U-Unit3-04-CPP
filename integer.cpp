@@ -5,22 +5,31 @@
 // This is the guessing game program
 
 #include <iostream>
-
+#include <cmath>
 
 int main() {
     // this function checks if a number is positive or negative
+    int userInput;
 
     // input
-    int userInput
+    std::cout << "Enter a positive or negative integer: ";
+    std::cin >> userInput;
 
     // process
-    if (userInput == "red") {
-        std::cout << "Stop!";
-    } else if (colourOfLight == "yellow") {
-        std::cout << "Slow Down.";
-    } else if (colourOfLight == "green") {
-        std::cout << "Go, if all clear.";
+    if (userInput > 0) {
+        std::cout << userInput << " is a positive number"
+        << "" << std::endl;
+
+    } else if (userInput < 0) {
+        std::cout << userInput << " is a negative number"
+        << "" << std::endl;
+
+    } else if (userInput == 0) {
+        std::cout << userInput << " is just 0"
+        << "" << std::endl;
     } else {
         std::cout << "No idea!";
     }
+
+    std::cout << "\nDone." << std::endl;
 }
